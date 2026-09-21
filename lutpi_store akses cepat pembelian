@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lutpi Store</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #080b12;
+  color: white;
+}
+
+header {
+  padding: 32px 16px;
+  text-align: center;
+  background: linear-gradient(135deg, #111827, #1e293b);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+header p {
+  color: #cbd5e1;
+  margin: 8px 0 0;
+}
+
+.container {
+  max-width: 1050px;
+  margin: auto;
+  padding: 24px 15px;
+}
+
+h2 {
+  text-align: center;
+  margin: 5px 0 20px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.product {
+  background: #111827;
+  border: 1px solid #263244;
+  border-radius: 18px;
+  padding: 20px;
+  transition: .2s;
+}
+
+.product:hover {
+  transform: translateY(-3px);
+  border-color: #64748b;
+}
+
+.icon {
+  font-size: 36px;
+}
+
+.product h3 {
+  font-size: 16px;
+  min-height: 40px;
+  line-height: 1.3;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 14px 0;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 11px;
+  padding: 13px;
+  background: white;
+  color: #111827;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+.checkout {
+  display: none;
+  background: white;
+  color: #111827;
+  margin: 30px auto 0;
+  max-width: 560px;
+  border-radius: 20px;
+  padding: 22px;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  margin: 7px 0 13px;
+  font-size: 15px;
+}
+
+.summary {
+  background: #f3f4f6;
+  padding: 13px;
+  border-radius: 10px;
+  margin: 10px 0 16px;
+  font-weight: 700;
+}
+
+.payinfo {
+  text-align: center;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 18px;
+  padding-top: 18px;
+}
+
+.qris {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  margin: 15px auto;
+  border-radius: 12px;
+}
+
+.small {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.wa {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background: #16a34a;
+  color: white;
+  padding: 14px;
+  border-radius: 11px;
+  font-weight: 800;
+  margin-top: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 28px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🛒 LUTPI STORE</h1>
+  <p>Produk Game & File Digital</p>
+</header>
+
+<div class="container">
+
+<h2>DAFTAR PRODUK</h2>
+
+<div class="products">
+
+  <article class="product">
+    <div class="icon">🎮</div>
+    <h3>GRAFIK MC SMOOTH</h3>
+    <div class="price">Rp10.000</div>
+    <button onclick="buy('GRAFIK MC SMOOTH',10000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">🔥</div>
+    <h3>GRAFIK MC EXTREME</h3>
+    <div class="price">Rp15.000</div>
+    <button onclick="buy('GRAFIK MC EXTREME',15000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">🎯</div>
+    <h3>DRAG HS X AIMLOCK</h3>
+    <div class="price">Rp10.000</div>
+    <button onclick="buy('DRAG HS X AIMLOCK',10000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">⚡</div>
+    <h3>GLUWOL MINI X DRAG HS 40%</h3>
+    <div class="price">Rp15.000</div>
+    <button onclick="buy('GLUWOL MINI X DRAG HS 40%',15000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">🎯</div>
+    <h3>AIM XIT LITE</h3>
+    <div class="price">Rp7.000</div>
+    <button onclick="buy('AIM XIT LITE',7000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">🎯</div>
+    <h3>AIM XIT 85%</h3>
+    <div class="price">Rp6.000</div>
+    <button onclick="buy('AIM XIT 85%',6000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">📁</div>
+    <h3>FILE MENTAHAN GACOR V3</h3>
+    <div class="price">Rp5.000</div>
+    <button onclick="buy('FILE MENTAHAN GACOR V3',5000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">💥</div>
+    <h3>CRACK HEAD OB55</h3>
+    <div class="price">Rp10.000</div>
+    <button onclick="buy('CRACK HEAD OB55',10000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">🎯</div>
+    <h3>AIM READ HSX</h3>
+    <div class="price">Rp8.000</div>
+    <button onclick="buy('AIM READ HSX',8000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+  <article class="product">
+    <div class="icon">⚙️</div>
+    <h3>DRAG SETTING V4</h3>
+    <div class="price">Rp9.000</div>
+    <button onclick="buy('DRAG SETTING V4',9000)">
+      BELI SEKARANG
+    </button>
+  </article>
+
+</div>
+
+<section class="checkout" id="checkout">
+
+  <h2 style="color:#111827">
+    Checkout
+  </h2>
+
+  <div class="summary">
+    Produk:
+    <span id="selectedProduct">-</span>
+    <br>
+    Total:
+    <span id="selectedPrice">-</span>
+  </div>
+
+  <label>Nama Pembeli</label>
+
+  <input
+    id="buyer"
+    type="text"
+    placeholder="Masukkan nama"
+  >
+
+  <div class="payinfo">
+
+    <h3>💳 ALL PAY / QRIS</h3>
+
+    <!--
+      QRIS:
+      Ganti bagian src di bawah
